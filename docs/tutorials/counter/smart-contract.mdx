@@ -88,6 +88,12 @@ npm init -y
 
 This generates a basic `package.json` file.
 
+### Install development dependencies
+
+```bash
+npm install --save-dev typescript
+```
+
 ### Configure TypeScript
 
 Create a `tsconfig.json` file in the `contract` directory:
@@ -103,6 +109,7 @@ Create a `tsconfig.json` file in the `contract` directory:
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
@@ -398,7 +405,7 @@ Create `contract/src/index.ts` to re-export the contract API:
 export * as Counter from './managed/counter/contract/index.js';
 
 // Re-export witness implementations and types
-export * from './witnesses';
+export * from './witnesses.js';
 ```
 
 This file:
