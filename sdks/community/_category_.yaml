@@ -1,0 +1,8 @@
+position: 40
+label: 'Community'
+collapsible: true
+collapsed: true
+link:
+  type: generated-index
+  title: Community SDKs
+  description: Community-built tools and integrations for Midnight Network.
